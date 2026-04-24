@@ -76,6 +76,8 @@ the following form: YYYY.0M.0D.
 - Created a README at the root to explain how to use the template repo
 - Created initial drafts of the six portfolio assessments
 - Added READMEs to key folders like `test` and `lib` to explain their purpose
+- decided on which of the 3 designs to use 
+- created proof of concept for player tracker 
 
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
