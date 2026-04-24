@@ -136,9 +136,12 @@ public class PlayerTracker {
 
         // Print individual stats
         out.println("=== Player Stats ===");
-        out.println("LeBron Points: " + tracker.getStat("LeBron James", "points"));
-        out.println("Curry Points: " + tracker.getStat("Stephen Curry", "points"));
-        out.println("Jokic Rebounds: " + tracker.getStat("Nikola Jokic", "rebounds"));
+        out.println(
+                "LeBron Points: " + tracker.getStat("LeBron James", "points"));
+        out.println(
+                "Curry Points: " + tracker.getStat("Stephen Curry", "points"));
+        out.println("Jokic Rebounds: "
+                + tracker.getStat("Nikola Jokic", "rebounds"));
 
         // Print averages
         out.println("\n=== League Averages ===");
