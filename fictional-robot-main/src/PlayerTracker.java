@@ -1,20 +1,20 @@
 import components.map.Map;
 import components.map.Map1L;
-import components.simplereader.SimpleReader;
-import components.simplereader.SimpleReader1L;
 import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
 /**
- * Tracks basketball player statistics such as points,
- * rebounds, assists, steals, and blocks.
+ * Proof of concept for PlayerTracker component. Tracks basketball player
+ * statistics such as points, rebounds, assists, steals, and blocks.
  */
+
 public class PlayerTracker {
 
     /**
-     *  A Map where each key is a player name
-     * and each value is another Map of stat names to values.
+     * A Map where each key is a player name and each value is another Map of
+     * stat names to values.
      */
+
     private Map<String, Map<String, Integer>> playerStats;
 
     /**
@@ -26,7 +26,11 @@ public class PlayerTracker {
 
     /**
      * Adds a new player to the tracker with all stats set to 0.
+     *
+     * @param playerName
+     *            the name of player being added
      */
+
     public void addPlayer(String playerName) {
         Map<String, Integer> stats = new Map1L<>();
         stats.add("points", 0);
@@ -39,7 +43,15 @@ public class PlayerTracker {
 
     /**
      * Updates a specific stat for a given player.
+     *
+     * @param playerName
+     *            the name of the player
+     * @param stat
+     *            the stat to update
+     * @param value
+     *            the new value for the stat
      */
+
     public void updateStat(String playerName, String stat, int value) {
         Map<String, Integer> stats = this.playerStats.value(playerName);
         stats.replaceValue(stat, value);
@@ -47,6 +59,12 @@ public class PlayerTracker {
 
     /**
      * Returns the value of a specific stat for a given player.
+     *
+     * @param playerName
+     *            the name of the player
+     * @param stat
+     *            the stat to retrieve
+     * @return the value of the stat
      */
     public int getStat(String playerName, String stat) {
         return this.playerStats.value(playerName).value(stat);
@@ -54,7 +72,12 @@ public class PlayerTracker {
 
     /**
      * Returns the average of a specific stat across all players.
+     *
+     * @param stat
+     *            the stat to average
+     * @return the average value of the stat across all players
      */
+
     public double avgStat(String stat) {
         double total = 0;
         double count = this.playerStats.size();
@@ -65,9 +88,13 @@ public class PlayerTracker {
     }
 
     /**
-     * Returns the name of the player with the highest value
-     * for a given stat.
+     * Returns the name of the player with the highest value for a given stat.
+     *
+     * @param stat
+     *            the stat to check
+     * @return the name of the player with the highest value
      */
+
     public String highestPlayer(String stat) {
         String best = "";
         int bestValue = -1;
@@ -82,7 +109,7 @@ public class PlayerTracker {
     }
 
     /**
-     * Main method demonstrating the PlayerTracker in action.
+     * Main method showing the PlayerTracker in action.
      */
     public static void main(String[] args) {
         SimpleWriter out = new SimpleWriter1L();
